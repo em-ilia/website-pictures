@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Emilia Allison</title>
+	<link rel="stylesheet" href="css/pictures.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<body>
+	<div id="overlay"></div>
+	<main class="offset-grid--top--wide fullsize side-a">
+		<div>
+			<div>
+				<h1>
+					Pictures
+				</h1>
+				<h2>gated because the internet is scary</h2>
+			</div>
+			<div class="gallery">
+				<!-- Images go below -->
+				<!-- Images go above -->
+			</div>
+		</div>
+		<a href="../">
+		</a>
+		<div class="side-a__main-content-cover"></div>
+	</main>
+	<footer class="lock-bottom">
+		<p><a href="../">Return</a></p>
+	</footer>
+	<script>
+		// Convenience to open images when clicked :)
+		// Also deletes images if they don't load
+		// Everything still works without JS ofc
+		const imgs = document.getElementsByTagName('img');
+		for (let img of imgs) {
+			img.onclick = () => window.open(img.src);
+			img.onerror = () => {img.remove();
+				console.error(`Failed to load ${img.src}`);}
+		}
+	</script>
+</body>
+
+</html>
