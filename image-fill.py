@@ -60,7 +60,7 @@ def create_section(name: str, image_paths: [Path]) -> [str]:
 
     # Add the image tags
     for img in image_paths:
-        out.append(create_img_tag(img, 1 if name == "root" else 2))
+        out.append(create_img_tag(img, 0 if name == "root" else 1))
 
     # close the details tag
     out.append('</div>')
